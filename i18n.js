@@ -106,7 +106,7 @@ const I18N=(()=>{
     'Giỏ hàng đang trống.':'Your cart is empty.','Xem sản phẩm':'Browse products',
     'Vui lòng đăng nhập để xem lịch sử mua hàng.':'Please log in to view your order history.',
     'Bạn chưa có đơn hàng nào.':'You have no orders yet.','Mua sắm ngay':'Shop now','Xin chào,':'Hello,',
-    'Đăng xuất':'Log out','Đang xử lý':'Processing','Mã đơn':'Order ID','Giao tới:':'Ship to:','Ghi chú:':'Note:',
+    'Đăng xuất':'Log out','Đang xử lý':'Processing','Đã hủy':'Cancelled','Hủy đơn hàng':'Cancel order','Đã hủy đơn hàng':'Order cancelled','Bạn có chắc muốn hủy đơn hàng này?':'Are you sure you want to cancel this order?','Mã đơn':'Order ID','Giao tới:':'Ship to:','Ghi chú:':'Note:',
     'Thanh toán khi nhận hàng':'Cash on delivery',
 
     /* Đăng nhập / đăng ký */

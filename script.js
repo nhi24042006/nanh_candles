@@ -148,11 +148,17 @@ function renderHist(){
   const os=(get('nanhOrders')||[]).filter(o=>o.email===cur.email).reverse();
   let html='<div class="hello">'+t('Xin chào,')+' <b>'+esc(cur.name)+'</b> <button type="button" class="back" id="hOut">'+t('Đăng xuất')+'</button></div>';
   if(!os.length)html+='<p class="empty">'+t('Bạn chưa có đơn hàng nào.')+' <a href="#products">'+t('Mua sắm ngay')+'</a></p>';
-  html+=os.map(o=>`<article class="order"><div class="oh"><b>${t('Mã đơn')} ${esc(o.id)}</b><span>${new Date(o.date).toLocaleString(I18N.lang==='en'?'en-US':'vi-VN')}</span><em>${esc(t(o.status))}</em></div>${o.items.map(x=>`<div class="oi"><span>${esc(t(x.n))} × ${x.q}</span><span>${fmt(x.p*x.q)}</span></div>`).join('')}<div class="oi tot"><span>${t('Tổng cộng')}</span><span>${fmt(o.total)}</span></div><p class="od">${t('Giao tới:')} ${esc(o.name)} · ${esc(o.phone)} · ${esc(o.addr)}<br>${t(o.pay==='bank'?'Chuyển khoản ngân hàng':'Thanh toán khi nhận hàng')}${o.note?'<br>'+t('Ghi chú:')+' '+esc(o.note):''}</p></article>`).join('');
+  html+=os.map(o=>`<article class="order"><div class="oh"><b>${t('Mã đơn')} ${esc(o.id)}</b><span>${new Date(o.date).toLocaleString(I18N.lang==='en'?'en-US':'vi-VN')}</span><em${o.status==='Đã hủy'?' class="cx"':''}>${esc(t(o.status))}</em></div>${o.items.map(x=>`<div class="oi"><span>${esc(t(x.n))} × ${x.q}</span><span>${fmt(x.p*x.q)}</span></div>`).join('')}<div class="oi tot"><span>${t('Tổng cộng')}</span><span>${fmt(o.total)}</span></div><p class="od">${t('Giao tới:')} ${esc(o.name)} · ${esc(o.phone)} · ${esc(o.addr)}<br>${t(o.pay==='bank'?'Chuyển khoản ngân hàng':'Thanh toán khi nhận hàng')}${o.note?'<br>'+t('Ghi chú:')+' '+esc(o.note):''}</p>${o.status==='Đang xử lý'?`<button type="button" class="cancel" data-cancel="${esc(o.id)}">${t('Hủy đơn hàng')}</button>`:''}</article>`).join('');
   box.innerHTML=html;
 }
 $('#histList').onclick=e=>{
   if(e.target.id==='hLogin'){setMode('login');dlg.showModal()}
+  const cb=e.target.closest('[data-cancel]');
+  if(cb){
+    if(!confirm(t('Bạn có chắc muốn hủy đơn hàng này?')))return;
+    const os=get('nanhOrders')||[],o=os.find(x=>x.id===cb.dataset.cancel&&cur&&x.email===cur.email);
+    if(o&&o.status==='Đang xử lý'){o.status='Đã hủy';set('nanhOrders',os);renderHist();toast(t('Đã hủy đơn hàng'))}
+  }
   if(e.target.id==='hOut'){cur=null;set('nanhCur',null);upd();toast(t('Đã đăng xuất'))}
 };
 cart=get('nanhCart')||[];saveCart();
