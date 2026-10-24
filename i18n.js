@@ -119,7 +119,11 @@ const I18N=(()=>{
     /* Chân trang */
     'Đây là sản phẩm phục vụ cho môn học Truyền thông số - Sinh viên trường Đại học Văn Lang':
     'This is a project for the Digital Communication course – students of Van Lang University',
-    'Ý nghĩa tên gọi NÀNH':'Meaning of the name NÀNH','Bộ sưu tập':'Collections'
+    'Ý nghĩa tên gọi NÀNH':'Meaning of the name NÀNH','Bộ sưu tập':'Collections',
+    'Mộng Hà Thành':'Hanoi Dream',
+    'MỘNG HÀ THÀNH':'HANOI DREAM','THÁNG BA XỨ BẮC':'MARCH IN THE NORTH','NẮNG NGHỆ SÔNG HƯƠNG':'GOLDEN SUN OVER THE PERFUME RIVER',
+    'HOÀI PHỐ ĐÊM TRĂNG':'MOONLIT NOSTALGIC STREET','SÀI GÒN GIÓ MÁT':'SAIGON COOL BREEZE','NẮNG MỚI MIỀN TÂY':'NEW SUNSHINE OF THE MEKONG DELTA',
+    'Bộ sưu tập':'Collections','Ảnh trước':'Previous photo','Ảnh sau':'Next photo','Bộ ảnh hũ nến':'Candle jar photos'
   };
 
   /* Câu có chứa số / tên (động) */
@@ -135,8 +139,71 @@ const I18N=(()=>{
     'Trà xanh hoa nhài':'A fresh, gentle green tea scent combined with the soft, slightly sweet fragrance of jasmine, creating a clean and relaxing feeling in your space. Perfect for reading, resting or enjoying a quiet moment to yourself.',
     'Sen':'A delicate, gentle lotus fragrance that brings a calm and fresh feeling to your space. Perfect for moments when you want to unwind, meditate or enjoy a quiet time.',
     'Hoa hồng':'A soft, feminine rose fragrance with a touch of sweetness, creating a gentle and romantic feeling in your space. Perfect for self-care, a bubble bath or some time to yourself.',
-    'Cam quế':'A bright orange scent combined with warm cinnamon, creating a cozy, comfortable and energizing atmosphere. Perfect for relaxing, working or creating a warm and intimate mood.'
+    'Cam quế':'A bright orange scent combined with warm cinnamon, creating a cozy, comfortable and energizing atmosphere. Perfect for relaxing, working or creating a warm and intimate mood.',
+    'MỘNG HÀ THÀNH':`Autumn gifts from Hanoi always carry a powerful sense of nostalgia, awakening tender memories of a time long past. The “Hanoi Dream” scented candle is a simple, rustic journey through scent, bringing the breath of an autumn street corner into your little room. No need to go anywhere – just light the flame and the jar releases a gentle, sweetly chewy fragrance of freshly pounded young green rice flakes (cốm), blended with the calm of Old Quarter tea. This scent softly soothes the nervous system and brings a strangely deep stillness and peace.
+The label artwork depicts the majestic Ho Chi Minh Mausoleum under the fluttering red flag with a yellow star, set against a sky of a thousand years of culture, expressing national pride and the enduring beauty of history.
+SCENT NOTES
+Top notes: Làng Vòng sticky young rice flakes, heather
+Middle notes: Old Quarter tea, fresh lotus leaf
+Base notes: Cedarwood, warm amber
+EACH SET INCLUDES
+Premium soy wax candle jar (180g)
+Card with a QR code to a healing music playlist (Đàn bầu & Hát xẩm)
+Packed in a neat, eco-friendly paper gift box`,
+    'THÁNG BA XỨ BẮC':`The fresh, dewy air of the ancient capital carries a resilience and elegance that transcend time. The “March in the North” scented candle takes you strolling past majestic limestone ranges, breathing in white lotus blossoms in full bloom along the Tràng An river, blended with the cool freshness of wild lemon on a misty morning. The scent brings a feeling of cleansing, purifying negative energy and restoring inner clarity.
+The image of the ancient gate of Hoa Lư Ancient Capital, mirrored beside rivers, mountains and clouds, expresses steadfastness, historical roots and the unspoiled beauty of the Northern countryside.
+SCENT NOTES
+Top notes: Wild lemon, dewy grass
+Middle notes: Tràng An white lotus, areca flower
+Base notes: Mossy ancient stone, pine wood
+EACH SET INCLUDES
+Premium soy wax candle jar (180g)
+Card with a QR code to a healing music playlist (Đàn tranh & flowing water)
+Packed in a neat, eco-friendly paper gift box`,
+    'NẮNG NGHỆ SÔNG HƯƠNG':`The graceful, shy yet profound beauty of the ancient capital of Huế always stirs indescribable feelings. The “Golden Sun over the Perfume River” scented candle evokes a quiet royal palace with the dreamy note of ripe thanh trà – the famed fruit once offered to the emperor – blended with the elegance of ylang-ylang and a touch of alluring agarwood. The scent soothes hurts and nurtures depth and calm in the soul.
+The artwork of Ngọ Môn Gate in Huế, glittering under the night sky, portrays the poetic, romantic and mysterious charm of this heritage land.
+SCENT NOTES
+Top notes: Huế thanh trà, orange peel oil
+Middle notes: Ylang-ylang, magnolia
+Base notes: Royal palace agarwood, sandalwood
+EACH SET INCLUDES
+Premium soy wax candle jar (180g)
+Card with a QR code to a healing music playlist (Đàn nguyệt on the Perfume River)
+Packed in a neat, eco-friendly paper gift box`,
+    'HOÀI PHỐ ĐÊM TRĂNG':`Heritage music combined with the art of scent creates a complete healing therapy for all the senses. The “Moonlit Nostalgic Street” scented candle carries the luxurious breath of the ancient capital’s festivals, spreading the warmth of fresh ginger and the sweetness of ripe tangerine, intertwined with magnolia and lingering amber. This scent stimulates the senses and quickly brings warm energy and emotional balance.
+The image of artists performing Huế Royal Court Music in traditional costumes honours the nation’s intangible cultural heritage, bringing ancient art into modern life.
+SCENT NOTES
+Top notes: Fragrant tangerine, warm ginger
+Middle notes: Magnolia, light cinnamon
+Base notes: Amber, cedar
+EACH SET INCLUDES
+Premium soy wax candle jar (180g)
+Card with a QR code to a healing music playlist (Huế Royal Court Music)
+Packed in a neat, eco-friendly paper gift box`,
+    'SÀI GÒN GIÓ MÁT':`Saigon – the city that never sleeps – is always generous, open and full of life for anyone who sets foot in it. The “Saigon Cool Breeze” scented candle recreates a Saigon all of its own: the rich, awakening note of iced milk coffee on a morning street corner, blended with the sweet-sour taste of fresh kumquat and plumeria blooming in the late afternoon sun. The scent awakens creative energy and sparks enthusiasm for work.
+The image of the old Bến Thành Market meeting the modern Bitexco Tower rising high expresses a spirit that cherishes memories yet is always ready to reach out to the world.
+SCENT NOTES
+Top notes: Night-blooming cactus flower, refreshing river breeze
+Middle notes: Street-corner plumeria, iced milk coffee
+Base notes: Light musk, modern juniper
+EACH SET INCLUDES
+Premium soy wax candle jar (180g)
+Card with a QR code to a healing music playlist (Đàn sến & concave-fretboard guitar of the South)
+Packed in a neat, eco-friendly paper gift box`,
+    'NẮNG MỚI MIỀN TÂY':`The Mekong Delta shows itself through its bountiful heart, its generosity and its warm, sincere people. The “New Sunshine of the Mekong Delta” scented candle takes you to the land of rivers in the South, immersed in the refreshing sweetness of fresh soursop, the rustic, lightly creamy note of coconut blossom and the cool breeze brushing past morning-dewed bồn bồn stalks. The scent washes away all worries and brings freedom, freshness and abundant vitality.
+The symbols of the đàn kìm, the conical hat, the checkered krama scarf and a colourful boat on the water express the simple, humble and bountiful character of the alluvial land.
+SCENT NOTES
+Top notes: Fresh soursop, dewy bồn bồn
+Middle notes: Pure coconut blossom, ripe rice
+Base notes: Coconut syrup, southern mangrove wood
+EACH SET INCLUDES
+Premium soy wax candle jar (180g)
+Card with a QR code to a healing music playlist (Đàn kìm & orchard waterways)
+Packed in a neat, eco-friendly paper gift box`
   };
+  const norm=x=>String(x||'').trim().toUpperCase();
+  const DESCN={};for(const k in DESC)DESCN[norm(k)]=DESC[k];
+
 
   function tr(s){
     const k=String(s).trim();
@@ -148,7 +215,7 @@ const I18N=(()=>{
     return r===undefined?s:String(s).replace(k,()=>r);
   }
   const t=s=>lang==='en'?tr(s):s;
-  const desc=(name,vi)=>lang==='en'&&DESC[name]?DESC[name]:vi;
+  const desc=(name,vi)=>lang==='en'&&DESCN[norm(name)]?DESCN[norm(name)]:vi;
 
   const textOrig=new WeakMap(),attrOrig=new WeakMap();
   const ATTRS=['aria-label','title','placeholder','alt'];

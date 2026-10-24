@@ -87,11 +87,11 @@
     <h3 class="all">Tất cả sản phẩm</h3>
     <!-- Mỗi sản phẩm = 1 thẻ <article>. Đổi ảnh: sửa src="images/..." trong thẻ <img> -->
     <div id="grid" class="grid">
-      <article class="card" data-p="250000" data-n="Trà xanh hoa nhài" data-sold="3" data-d="Hương trà xanh thanh mát, nhẹ nhàng kết hợp cùng nét thơm dịu và hơi ngọt của hoa nhài, tạo cảm giác sạch sẽ, thư thái cho không gian. Phù hợp khi đọc sách, nghỉ ngơi hoặc tận hưởng một khoảng thời gian yên tĩnh cho riêng mình.">
+      <article class="card" data-p="250000" data-n="Trà Xanh Hoa Nhài" data-sold="3" data-d="Hương trà xanh thanh mát, nhẹ nhàng kết hợp cùng nét thơm dịu và hơi ngọt của hoa nhài, tạo cảm giác sạch sẽ, thư thái cho không gian. Phù hợp khi đọc sách, nghỉ ngơi hoặc tận hưởng một khoảng thời gian yên tĩnh cho riêng mình.">
         <div class="img" style="background:radial-gradient(circle at 50% 35%,#4d5f3f,#15100d)">
-          <img src="images/sp1.jpg" alt="Trà xanh hoa nhài" onerror="this.remove()">
+          <img src="images/sp1.jpg" alt="Trà Xanh Hoa Nhài" onerror="this.remove()">
         </div>
-        <h3>Trà xanh hoa nhài</h3>
+        <h3>Trà Xanh Hoa Nhài</h3>
         <div class="p">250,000 đ</div>
         <small>Đã bán 3</small>
         <button type="button" class="btn">Xem chi tiết</button>
@@ -105,28 +105,154 @@
         <small>Đã bán 5</small>
         <button type="button" class="btn">Xem chi tiết</button>
       </article>
-      <article class="card" data-p="300000" data-n="Hoa hồng" data-sold="9" data-d="Hương hoa hồng dịu dàng, nữ tính và có chút ngọt nhẹ, tạo cảm giác mềm mại, lãng mạn cho không gian. Phù hợp chăm sóc bản thân, ngâm bồn hoặc tận hưởng một khoảng thời gian riêng.">
+      <article class="card" data-p="300000" data-n="Hoa Hồng" data-sold="9" data-d="Hương hoa hồng dịu dàng, nữ tính và có chút ngọt nhẹ, tạo cảm giác mềm mại, lãng mạn cho không gian. Phù hợp chăm sóc bản thân, ngâm bồn hoặc tận hưởng một khoảng thời gian riêng.">
         <div class="img" style="background:radial-gradient(circle at 50% 35%,#7a2a24,#15100d)">
-          <img src="images/sp3.jpg" alt="Hoa hồng" onerror="this.remove()">
+          <img src="images/sp3.jpg" alt="Hoa Hồng" onerror="this.remove()">
         </div>
-        <h3>Hoa hồng</h3>
+        <h3>Hoa Hồng</h3>
         <div class="p">300,000 đ</div>
         <small>Đã bán 9</small>
         <button type="button" class="btn">Xem chi tiết</button>
       </article>
-      <article class="card" data-p="280000" data-n="Cam quế" data-sold="7" data-d="Hương cam tươi sáng kết hợp cùng quế ấm áp, tạo cảm giác dễ chịu, ấm cúng và tràn đầy năng lượng cho không gian. Phù hợp cho những lúc muốn thư giãn, làm việc hoặc tạo không khí ấm áp, gần gũi.">
+      <article class="card" data-p="280000" data-n="Cam Quế" data-sold="7" data-d="Hương cam tươi sáng kết hợp cùng quế ấm áp, tạo cảm giác dễ chịu, ấm cúng và tràn đầy năng lượng cho không gian. Phù hợp cho những lúc muốn thư giãn, làm việc hoặc tạo không khí ấm áp, gần gũi.">
         <div class="img" style="background:radial-gradient(circle at 50% 35%,#9a8460,#15100d)">
-          <img src="images/sp4.jpg" alt="Cam quế" onerror="this.remove()">
+          <img src="images/sp4.jpg" alt="Cam Quế" onerror="this.remove()">
         </div>
-        <h3>Cam quế</h3>
+        <h3>Cam Quế</h3>
         <div class="p">280,000 đ</div>
         <small>Đã bán 7</small>
         <button type="button" class="btn">Xem chi tiết</button>
       </article>
     </div>
     <p id="none" hidden style="text-align:center">Không tìm thấy sản phẩm phù hợp.</p>
+
+    <!-- BỘ SƯU TẬP: mỗi hũ = 1 thẻ <article class="card col">. Danh sách ảnh nằm trong data-imgs (cách nhau bằng dấu phẩy, ảnh đầu tiên là ảnh bìa) -->
+    <h3 class="all" id="collection">Bộ sưu tập</h3>
+    <div id="colGrid" class="grid">
+      <article class="card col" role="button" tabindex="0" data-n="Mộng Hà Thành" data-p="350000" data-sold="7" data-imgs="images/hanoi.jpg,images/bắc%201.png,images/HDSD%20NÀNH%20(1).png,images/HDSD%20NÀNH.png" 
+      data-d="Những thức quà mùa thu Hà Nội luôn mang trong mình một sức mạnh hoài niệm mãnh liệt, đánh thức những kỷ niệm êm đềm về một thời đã xa. Nến thơm “Mộng Hà Thành” là một chuyến du hành khứu giác vô cùng mộc mạc, mang trọn vẹn hơi thở của góc phố mùa thu vào ngay trong căn phòng nhỏ của bạn. Không cần đi đâu xa, chỉ cần châm một mồi lửa, hũ nến sẽ bung tỏa hương thơm dịu dịu, dẻo ngọt đặc trưng của những mẻ cốm xanh mới giã quyện cùng chút thanh tĩnh của trà mạn phố cổ. Mùi hương này nhẹ nhàng xoa dịu hệ thần kinh, gợi lên một sự tĩnh lặng, bình yên đến lạ kỳ.
+        Bức tranh nhãn nến khắc họa Lăng Chủ tịch Hồ Chí Minh uy nghiêm dưới lá cờ đỏ sao vàng tung bay trên nền trời nghìn năm văn hiến, gửi gắm lòng tự hào dân tộc và nét đẹp lịch sử trường tồn.
+        CÁC NỐT HƯƠNG
+        Hương đầu: Cốm dẻo Làng Vòng, thạch thảo
+        Hương giữa: Trà mạn phố cổ, Lá sen tươi
+        Hương cuối: Gỗ hoàng đàn, Hổ phách ấm
+        MỖI BỘ SẢN PHẨM GỒM
+        Lọ nến sáp đậu nành cao cấp (180g)
+        Thẻ bài chứa mã QR Playlist nhạc chữa lành (Đàn Bầu & Hát Xẩm)
+        Đựng trong hộp quà giấy chỉn chu, bảo vệ môi trường">
+        <div class="img" style="background:radial-gradient(circle at 50% 35%,#4d5f3f,#15100d)">
+          <img src="images/hanoi.jpg" alt="Mộng Hà Thành" onerror="this.remove()">
+        </div>
+        <h3>Mộng Hà Thành</h3>
+        <div class="p">350,000 đ</div>
+        <small>Đã bán 7</small>
+        <button type="button" class="btn" tabindex="-1">Xem chi tiết</button>
+      </article>
+
+      <article class="card col" role="button" tabindex="0" data-n="Tháng Ba Xứ Bắc" data-p="350000" data-sold="2" data-imgs="images/ninhbinh.jpg,images/bắc%202.png,images/HDSD%20NÀNH%20(1).png,images/HDSD%20NÀNH.png" 
+      data-d="Không khí trong lành, đẫm sương của vùng đất cố đô nghìn năm mang trong mình sự kiên cường và thanh tao vượt thời gian. Nến thơm “Tháng Ba Xứ Bắc” đưa bạn dạo bước qua những dải núi đá vôi hùng vĩ, hít hà lồng ngực hương hoa sen trắng nở rộ trên dòng Tràng An hòa quyện cùng chút mát lành của chanh rừng buổi mờ sương. Mùi hương mang lại cảm giác gột rửa, thanh lọc năng lượng tiêu cực và trả lại sự trong trẻo nội tại.
+        Hình ảnh cổng Cố đô Hoa Lư cổ kính soi bóng bên sông núi mây trời thể hiện sự vững chãi, cội nguồn lịch sử và nét đẹp nguyên sơ của làng quê Bắc Bộ.
+        CÁC NỐT HƯƠNG 
+        Hương đầu: Chanh rừng, Cỏ đẫm sương
+        Hương giữa: Sen trắng Tràng An, Hoa cau
+        Hương cuối: Rêu phong đá cổ, Gỗ thông
+        MỖI BỘ SẢN PHẨM GỒM
+        Lọ nến sáp đậu nành cao cấp (180g)
+        Thẻ bài chứa mã QR Playlist nhạc chữa lành (Đàn Tranh & Tiếng nước chảy)
+        Đựng trong hộp quà giấy chỉn chu, bảo vệ môi trường">
+        <div class="img" style="background:radial-gradient(circle at 50% 35%,#8e7480,#15100d)">
+          <img src="images/ninhbinh.jpg" alt="Tháng Ba Xứ Bắc " onerror="this.remove()">
+        </div>
+        <h3>Tháng Ba Xứ Bắc </h3>
+        <div class="p">350,000 đ</div>
+        <small>Đã bán 2</small>
+        <button type="button" class="btn" tabindex="-1">Xem chi tiết</button>
+      </article>
+
+      <article class="card col" role="button" tabindex="0" data-n="Nắng Nghệ Sông Hương " data-p="350000" data-sold="6" data-imgs="images/codo.jpg,images/trung%201.png,images/HDSD%20NÀNH%20(1).png,images/HDSD%20NÀNH.png"
+      data-d="Vẻ đẹp đài các, e ấp nhưng đầy chiều sâu của Cố đô Huế luôn gieo vào lòng người những xao xuyến khó tả. Nến thơm “Nắng Nghệ Sông Hương” gợi mở không gian hoàng cung trầm mặc với nốt hương thanh trà chín mộng màng - thức quả tiến vua nức tiếng, quyện cùng nét kiêu sa của hoa ngọc lan tây và chút trầm hương quyến rũ. Mùi hương giúp vỗ về tổn thương, nuôi dưỡng sự sâu lắng và an tĩnh trong tâm hồn.
+        Bức tranh Ngọ Môn Huế lung linh rực rỡ dưới bầu trời đêm khắc họa nét thơ mộng, lãng mạn và sự bí ẩn diệu kỳ của vùng đất di sản.
+        CÁC NỐT HƯƠNG 
+        Hương đầu: Thanh trà Huế, Tinh dầu vỏ cam
+        Hương giữa: Hoa ngọc lan tây, Hoa mộc lan
+        Hương cuối: Trầm hương Hoàng cung, Đàn hương
+        MỖI BỘ SẢN PHẨM GỒM
+        Lọ nến sáp đậu nành cao cấp (180g)
+        Thẻ bài chứa mã QR Playlist nhạc chữa lành (Đàn Nguyệt dòng sông Hương)
+        Đựng trong hộp quà giấy chỉn chu, bảo vệ môi trường">
+        <div class="img" style="background:radial-gradient(circle at 50% 35%,#7a2a24,#15100d)">
+          <img src="images/codo.jpg" alt="Nắng Nghệ Sông Hương " onerror="this.remove()">
+        </div>
+        <h3>Nắng Nghệ Sông Hương </h3>
+        <div class="p">350,000 đ</div>
+        <small>Đã bán 6</small>
+        <button type="button" class="btn" tabindex="-1">Xem chi tiết</button>
+      </article>
+
+
+      <article class="card col" role="button" tabindex="0" data-n="Hoài Phố Đêm Trăng " data-p="350000" data-sold="3" data-imgs="images/hue.jpg,images/trung%202.png,images/HDSD%20NÀNH%20(1).png,images/HDSD%20NÀNH.png" 
+      data-d="Âm nhạc di sản kết hợp cùng nghệ thuật mùi hương sẽ tạo nên liệu pháp chữa lành trọn vẹn cho mọi giác quan. Nến thơm “Hoài Phố Đêm Trăng” mang hơi thở lễ hội Cố đô sang trọng, lan tỏa vị ấm áp của gừng tươi, ngọt trào của quýt chín đan cài cùng hương hoa mộc lan và hổ phách vương vấn. Mùi hương này có khả năng kích thích giác quan, mang lại nguồn năng lượng ấm áp và cân bằng cảm xúc  nhanh chóng.
+        Hình ảnh các nghệ nhân trình diễn Nhã nhạc Cung đình Huế trong trang phục truyền thống tôn vinh di sản văn hóa phi vật thể của dân tộc, đưa nghệ thuật xưa chạm vào cuộc sống hiện đại.
+        CÁC NỐT HƯƠNG 
+        Hương đầu: Quýt Hương, Gừng ấm
+        Hương giữa: Hoa mộc lan, Quế nhẹ
+        Hương cuối: Hổ phách, Tuyết tùng
+        MỖI BỘ SẢN PHẨM GỒM
+        Lọ nến sáp đậu nành cao cấp (180g)
+        Thẻ bài chứa mã QR Playlist nhạc chữa lành (Nhã nhạc cung đình huế)
+        Đựng trong hộp quà giấy chỉn chu, bảo vệ môi trường">
+        <div class="img" style="background:radial-gradient(circle at 50% 35%,#9a8460,#15100d)">
+          <img src="images/hue.jpg" alt="Hoài Phố Đêm Trăng " onerror="this.remove()">
+        </div>
+        <h3>Hoài Phố Đêm Trăng</h3>
+        <div class="p">350,000 đ</div>
+        <small>Đã bán 3</small>
+        <button type="button" class="btn" tabindex="-1">Xem chi tiết</button>
+      </article>
+
+            <article class="card col" role="button" tabindex="0" data-n="Sài Gòn Gió Mát" data-p="350000" data-sold="7" data-imgs="images/saigon.jpg,images/nam%201.png,images/HDSD%20NÀNH%20(1).png,images/HDSD%20NÀNH.png"
+            data-d="Sài Gòn - thành phố không bao giờ ngủ, luôn bao dung, cởi mở và tiếp thêm sức sống cho bất kỳ ai đặt chân đến. Nến thơm “Sài Gòn Gió Mát” tái hiện một Sài Gòn rất riêng: nốt cà phê sữa đá đậm đà tỉnh thức góc phố buổi sáng, hòa quyện cùng vị tắc tươi chua thanh ngọt ngào và hương hoa sứ nở rộ dưới ánh nắng chiều tà. Mùi hương giúp thức tỉnh nguồn năng lượng sáng tạo, khơi gợi cảm hứng làm việc năng nổ.
+              Hình ảnh Chợ Bến Thành cổ kính giao thoa cùng tòa nhà Bitexco hiện đại vươn cao thể hiện tinh thần trân trọng ký ức nhưng luôn sẵn sàng vươn mình ra thế giới. 
+              CÁC NỐT HƯƠNG
+              Hương đầu: Hoa huỳnh liên, Gió sông sảng khoái
+              Hương giữa: Hoa sứ góc phố, Cà phê sữa đá
+              Hương cuối: Xạ hương nhẹ, Bách xù hiện đại
+              MỖI BỘ SẢN PHẨM GỒM
+              nến sáp đậu nành cao cấp (180g)
+              Thẻ bài chứa mã QR Playlist nhạc chữa lành (Âm hưởng Đàn Sến & Đàn Ghita phím lõm Nam Bộ)
+              Đựng trong hộp quà giấy chỉn chu, bảo vệ môi trường">
+        <div class="img" style="background:radial-gradient(circle at 50% 35%,#9a8460,#15100d)">
+          <img src="images/saigon.jpg" alt="Sài Gòn Gió Mát" onerror="this.remove()">
+        </div>
+        <h3>Sài Gòn Gió Mát</h3>
+        <div class="p">350,000 đ</div>
+        <small>Đã bán 7</small>
+        <button type="button" class="btn" tabindex="-1">Xem chi tiết</button>
+      </article>
+
+            <article class="card col" role="button" tabindex="0" data-n="Nắng Mới Miền Tây" data-p="280000" data-sold="7" data-imgs="images/mientay.jpg,images/bst4-2.jpg,images/HDSD%20NÀNH%20(1).png,images/HDSD%20NÀNH.png"
+            data-d="Miền Tây hiện lên qua tấm lòng trù phú, sự phóng khoáng và tình người hào sảng, chân thành. Nến thơm “Nắng Mới Miền Tây” đưa bạn về với vùng đất sông nước Nam Bộ, chìm đắm trong hương ngọt sảng khoái của tép mãng cầu tươi, béo nhẹ mộc mạc của hoa dừa và làn gió mát lành vờn qua cọng bồn bồn sương sớm. Mùi hương này gạt đi mọi âu lo, mang đến sự tự do, tươi mới và nguồn sinh khí dồi dào.
+              Biểu tượng cây đàn Kìm, chiếc nón lá, khăn rằn và chuyến ghe rực rỡ sóng nước thể hiện nét mộc mạc, bình dị và trù phú của vùng đất phù sa.
+              CÁC NỐT HƯƠNG 
+              Hương đầu: Mãng cầu gai tươi, Bồn bồn sương sớm
+              Hương giữa: Hoa dừa tinh khôi, Hương lúa chín
+              Hương cuối: Mật dừa, Gỗ bần Nam Bộ
+              MỖI BỘ SẢN PHẨM GỒM
+              Lọ nến sáp đậu nành cao cấp (180g)
+              Thẻ bài chứa mã QR Playlist nhạc chữa lành (Tiếng Đàn Kìm & Sóng nước miệt vườn)
+              Đựng trong hộp quà giấy chỉn chu, bảo vệ môi trường">
+        <div class="img" style="background:radial-gradient(circle at 50% 35%,#9a8460,#15100d)">
+          <img src="images/mientay.jpg" alt="Nắng Mới Miền Tây" onerror="this.remove()">
+        </div>
+        <h3>Nắng Mới Miền Tây</h3>
+        <div class="p">350,000 đ</div>
+        <small>Đã bán 8</small>
+        <button type="button" class="btn" tabindex="-1">Xem chi tiết</button>
+      </article>
+    </div>
   </div>
 </section>
+
 
 <section id="guide">
   <div class="guide">
@@ -193,7 +319,7 @@
   <div class="cols">
     <div class="f"><img src="images/logo.png" alt="Nành Candles"></div>
     <div><h4>Về Nành</h4><a data-go="story">Câu chuyện hình thành</a><a data-go="name">Ý nghĩa tên gọi NÀNH</a><a data-go="vision">Tầm nhìn và sứ mệnh</a><a data-go="values">Giá trị cốt lõi</a></div>
-    <div><h4>Sản phẩm</h4><a href="#products">Tất cả sản phẩm</a><a href="#products">Bộ sưu tập</a></div>
+    <div><h4>Sản phẩm</h4><a href="#products">Tất cả sản phẩm</a><a href="#collection" data-col>Bộ sưu tập</a></div>
     <div><h4>Kết nối</h4>
   <a href="mailto:[nanh.candles@gmail.com">✉ Email</a>
   <a href="https://www.tiktok.com/@thomphuc_410?_r=1&_t=ZS-99mT8FsH4y5" target="_blank" rel="noopener">♪ TikTok</a>
@@ -227,6 +353,30 @@
       <button type="button" class="btn buy" id="pdAdd">Thêm vào giỏ hàng</button>
       <button type="button" class="btn buy alt" id="pdBuy">Mua ngay</button>
       <button type="button" class="back" id="pdClose" style="padding:12px 0 0">Đóng</button>
+    </div>
+  </div>
+</dialog>
+<dialog id="gl" aria-label="Bộ ảnh hũ nến">
+  <div class="gl">
+    <div class="gl-pics">
+      <div class="gl-main" id="glMain">
+        <img id="glImg" alt="">
+        <button type="button" class="gl-nav gl-prev" id="glPrev" aria-label="Ảnh trước">&#10094;</button>
+        <button type="button" class="gl-nav gl-next" id="glNext" aria-label="Ảnh sau">&#10095;</button>
+        <span class="gl-count" id="glCount" data-noi18n></span>
+      </div>
+      <div class="gl-thumbs" id="glThumbs" data-noi18n></div>
+    </div>
+    <div class="gl-info">
+      <h3 id="glTitle" data-noi18n></h3>
+      <div class="p" id="glPrice" data-noi18n></div>
+      <small id="glSold" data-noi18n></small>
+      <h4>Chi tiết sản phẩm</h4>
+      <p id="glDesc" data-noi18n></p>
+      <div class="qty"><button type="button" id="glMinus" aria-label="Giảm">−</button><span id="glQty" data-noi18n>1</span><button type="button" id="glPlus" aria-label="Tăng">+</button></div>
+      <button type="button" class="btn buy" id="glAdd">Thêm vào giỏ hàng</button>
+      <button type="button" class="btn buy alt" id="glBuy">Mua ngay</button>
+      <button type="button" class="back" id="glClose" style="padding:12px 0 0">Đóng</button>
     </div>
   </div>
 </dialog>

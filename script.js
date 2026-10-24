@@ -164,11 +164,83 @@ $('#histList').onclick=e=>{
 cart=get('nanhCart')||[];saveCart();
 show(location.hash.slice(1)||'home');
 
+/* ===== Bộ sưu tập: bấm vào hũ để xem nhiều ảnh ===== */
+function goCollection(){
+  location.hash='#products';show('products');
+  setTimeout(()=>$('#collection').scrollIntoView({behavior:'smooth'}),80);
+}
+$$('[data-col]').forEach(a=>a.onclick=e=>{e.preventDefault();goCollection()});
+const gl=$('#gl');let glImgs=[],glI=0,glName='',glBg='',glCard=null,glQ=1;
+function openGallery(c){
+  glImgs=(c.dataset.imgs||'').split(',').map(s=>s.trim()).filter(Boolean);
+  /* Ảnh đầu tiên luôn là ảnh bìa đang thấy trên thẻ, để bấm vào không bị đổi sang ảnh khác */
+  const cover=c.querySelector('.img img');
+  if(cover){
+    const cs=cover.getAttribute('src');
+    glImgs=glImgs.filter(x=>decodeURI(x)!==decodeURI(cs));
+    glImgs.unshift(cs);
+  }
+  glCard=c;glQ=1;$('#glQty').textContent=1;glName=c.dataset.n;glBg=c.querySelector('.img').style.background;
+  fillGl();
+  $('#glThumbs').innerHTML=glImgs.map((s,i)=>`<button type="button" data-i="${i}" aria-label="${i+1}/${glImgs.length}"><img src="${esc(s)}" alt="" onerror="this.remove()"></button>`).join('');
+  const multi=glImgs.length>1;
+  $('#glPrev').hidden=$('#glNext').hidden=!multi;
+  glShow(0);gl.showModal();
+}
+function fillGl(){
+  if(!glCard)return;
+  const c=glCard;
+  $('#glTitle').textContent=t(c.dataset.n);
+  $('#glPrice').textContent=fmt(+c.dataset.p||0);
+  $('#glSold').textContent=t('Đã bán '+(c.dataset.sold||0));
+  $('#glDesc').textContent=I18N.desc(c.dataset.n,c.dataset.d||'');
+}
+function glShow(i){
+  if(!glImgs.length)return;
+  glI=(i+glImgs.length)%glImgs.length;
+  const im=$('#glImg');
+  im.style.visibility='visible';
+  im.onerror=()=>{im.style.visibility='hidden'};
+  im.src=glImgs[glI];
+  im.alt=t(glName)+' '+(glI+1);
+  $('#glCount').textContent=(glI+1)+' / '+glImgs.length;
+  $$('#glThumbs button').forEach((b,k)=>{
+    b.classList.toggle('on',k===glI);
+    if(k===glI)b.scrollIntoView({block:'nearest',inline:'nearest'});
+  });
+}
+$('#colGrid').onclick=e=>{const c=e.target.closest('.card.col');if(c)openGallery(c)};
+$('#colGrid').onkeydown=e=>{
+  if(e.key!=='Enter'&&e.key!==' ')return;
+  const c=e.target.closest('.card.col');if(c){e.preventDefault();openGallery(c)}
+};
+$('#glPrev').onclick=()=>glShow(glI-1);
+$('#glNext').onclick=()=>glShow(glI+1);
+$('#glThumbs').onclick=e=>{const b=e.target.closest('button[data-i]');if(b)glShow(+b.dataset.i)};
+$('#glMinus').onclick=()=>{glQ=Math.max(1,glQ-1);$('#glQty').textContent=glQ};
+$('#glPlus').onclick=()=>{glQ++;$('#glQty').textContent=glQ};
+$('#glAdd').onclick=()=>{addToCart(glCard,glQ);toast(t('Đã thêm '+glQ+' × '+glCard.dataset.n+' vào giỏ'));gl.close()};
+$('#glBuy').onclick=()=>{addToCart(glCard,glQ);gl.close();location.hash='#giohang'};
+$('#glClose').onclick=()=>gl.close();
+gl.onclick=e=>{if(e.target===gl)gl.close()};
+gl.addEventListener('keydown',e=>{
+  if(e.key==='ArrowLeft')glShow(glI-1);
+  else if(e.key==='ArrowRight')glShow(glI+1);
+});
+let glX=null;
+$('#glMain').addEventListener('touchstart',e=>{glX=e.touches[0].clientX},{passive:true});
+$('#glMain').addEventListener('touchend',e=>{
+  if(glX===null)return;
+  const d=e.changedTouches[0].clientX-glX;glX=null;
+  if(Math.abs(d)>40)glShow(glI+(d<0?1:-1));
+},{passive:true});
+
 /* ===== Chuyển ngôn ngữ Việt / Anh ===== */
 function refreshLang(){
   upd();
   setMode(mode);
   if(pd.open)fillDetail();
+  if(gl.open)fillGl();
   if($('#giohang.on'))renderCart();
   if($('#lichsu.on'))renderHist();
 }
